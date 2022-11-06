@@ -1,6 +1,10 @@
+import TopBar from "./components/topbar/TopBar";
+
 function App() {
   return (
-    <div>Blog app</div>
+    <>
+      <TopBar/>
+    </>
   )
 }
 
