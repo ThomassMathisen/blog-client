@@ -12,11 +12,18 @@
   align-items: center;
 }
 
+.postInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .postCategories {
   font-family: sans-serif;
   font-weight: 400;
   font-size: 11px;
   color: #be9656;
+  line-height: 19px;
   margin-top: 15px;
   margin-right: 10px;
   cursor: pointer;

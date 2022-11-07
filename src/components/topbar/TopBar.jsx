@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import './topbar.css'
 
 export default function TopBar() {
-  const user = true;
+  const user = false;
   return (
     <div className="topbar">
       <div className="topLeft">
@@ -18,8 +18,16 @@ export default function TopBar() {
               HOME
             </Link>
           </li>
-          <li className='topListItem'>ABOUT</li>
-          <li className='topListItem'>CONTACT</li>
+          <li className='topListItem'>
+            <Link className="link" to="/about">
+              ABOUT
+            </Link>
+          </li>
+          <li className='topListItem'>
+            <Link className="link" to="/contact">
+              CONTACT
+            </Link>
+          </li>
           <li className='topListItem'>
             <Link className="link" to="/write">
               WRITE
