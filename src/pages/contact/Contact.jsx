@@ -12,7 +12,7 @@ export default function Contact() {
         <label>Subject</label>
         <input className="contactInput" type="text" placeholder="Subject" />
         <label>Message</label>
-        <textarea className="contactInput" type="textarea" placeholder="Write your message here..." />
+        <textarea className="contactInput contactMessage" type="textarea" placeholder="Write your message here..." />
         <button className="contactButton">Send</button>
       </form>
     </div>
