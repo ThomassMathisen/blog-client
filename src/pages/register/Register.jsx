@@ -13,12 +13,12 @@ export default function Register() {
     e.preventDefault()
     setError(false)
     try {
-    const res = await axios.post("/auth/register", {
-      username,
-      email,
-      password
-    })
-    res.data && window.location.replace("/login")
+      const res = await axios.post("/auth/register", {
+        username,
+        email,
+        password,
+      })
+      res.data && window.location.replace("/login")
     } catch (err) {
       setError(true)
     }
@@ -48,7 +48,7 @@ export default function Register() {
           placeholder="Enter your password..." 
           onChange={(e) => setPassword(e.target.value)}
         />
-        <button className="registerButton" type="submir">
+        <button className="registerButton" type="submit">
           Register
         </button>
       </form>
