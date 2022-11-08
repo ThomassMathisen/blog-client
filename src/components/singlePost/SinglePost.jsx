@@ -10,7 +10,7 @@ export default function SinglePost() {
   const path = location.pathname.split("/")[2]
   const [post, setPost] = useState({})
   const PF = "http://localhost:5000/images"
-  const {user} = useContext(Context)
+  const { user } = useContext(Context)
   const [title, setTitle] = useState("")
   const [desc, setDesc] = useState("")
   const [updateMode, setUpdateMode] = useState(false )
@@ -77,7 +77,7 @@ const handleUpdate = async () => {
           </h1>
         )}
         <div className="singlePostInfo">
-          <span>
+          <span className="singlePostAuthor">
             Author:
             <Link to={`/?user=${post.username}`} className="link">
               <b>{post.username}</b>
