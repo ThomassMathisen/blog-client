@@ -26,7 +26,7 @@ export default function Register() {
   return (
     <div className="register">
       <span className="registerTitle">Register</span>
-      <form className="registerForm" onSubmit={handleSubmit}>
+      <form className="registerForm">
         <label>Username</label>
         <input 
           className="registerInput" 
@@ -48,7 +48,7 @@ export default function Register() {
           placeholder="Enter your password..." 
           onChange={(e) => setPassword(e.target.value)}
         />
-        <button className="registerButton" type="submit">
+        <button className="registerButton" type="submit" onClick={handleSubmit}>
           Register
         </button>
       </form>

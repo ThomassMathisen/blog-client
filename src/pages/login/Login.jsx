@@ -26,7 +26,7 @@ export default function Login() {
   return (
     <div className="login">
       <span className="loginTitle">Login</span>
-      <form className="loginForm" onSubmit={handleSubmit}>
+      <form className="loginForm">
         <label>Username</label>
         <input 
           className="loginInput" 
@@ -41,7 +41,7 @@ export default function Login() {
           placeholder="Enter your password..." 
           ref={passwordRef}
         />
-        <button className="loginButton" type="submit" disabled={isFetching}>
+        <button className="loginButton" type="submit"  disabled={isFetching} onClick={handleSubmit}>
           Login
         </button>
       </form>

@@ -17,9 +17,10 @@ export default function Settings() {
     e.preventDefault()
     dispatch({ type: "UPDATE_START" })
     const updatedUser = {
+      userId: user._id,
       username,
       email,
-      password
+      password,
     }
     if (file) {
       const data = new FormData()
@@ -46,7 +47,7 @@ export default function Settings() {
           <span className="settingsTitleUpdate">Update account</span>
           <span className="settingsTitleDelete">Delete account</span>
         </div>
-        <form className="settingsForm" onSubmit={handleSubmit}>
+        <form className="settingsForm">
           <label>Profile Picture</label>
           <div className="settingsPicture">
             <img
@@ -68,23 +69,20 @@ export default function Settings() {
           <input 
             type="text" 
             placeholder={user.username} 
-            name="name"
             onChange={(e) => setUsername(e.target.value)}
           />
           <label>Email</label>
           <input 
             type="email" 
-            placeholder="thomasmathisen@hotmail.com" 
-            name="email" 
+            placeholder={user.email}
             onChange={(e) => setEmail(e.target.value)}
           />
           <label>Password</label>
           <input 
-            type="password"  
-            name="password" 
+            type="password"   
             onChange={(e) => setPassword(e.target.value)}
             />
-          <button className="settingsSubmitButton" type="submit">
+          <button className="settingsSubmitButton" type="submit" onClick={handleSubmit}>
             Update
           </button>
           {success && (
